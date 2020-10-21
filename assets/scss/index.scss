@@ -1,0 +1,9 @@
+@import "base/variables";
+@import "module/nav";
+@import "layout/main";
+
+.content {
+  background-color: $background-color;
+  height: 100%;
+  width: 100%;
+}
