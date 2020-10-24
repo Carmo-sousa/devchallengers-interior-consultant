@@ -2,13 +2,12 @@
 @import "../module/image";
 
 .main {
-  // background-color: violet;
+  display: flex;
+  height: auto;
+  justify-content: space-around;
   max-height: 555px;
   max-width: 1440px;
-  width: 100vw;
-  justify-content: space-around;
-  height: auto;
-  display: flex;
+  margin: 174px 0 200px 0;
   padding: 0 77px 0 50px;
-  margin: 174px 0 0 0;
+  width: 100vw;
 }

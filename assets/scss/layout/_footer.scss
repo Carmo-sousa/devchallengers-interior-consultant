@@ -1,0 +1,16 @@
+@import "../base/variables";
+
+.footer {
+  // background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 60px 0;
+
+  &__copyright {
+    color: $main-color;
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
