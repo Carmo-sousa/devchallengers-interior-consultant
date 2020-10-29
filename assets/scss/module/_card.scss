@@ -1,0 +1,49 @@
+@import "../base/variables";
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 189px;
+  width: 410px;
+  background-color: $background-color;
+  position: absolute;
+  bottom: -20%;
+  right: 5%;
+  grid-template:
+    "avatar"
+    "description";
+
+  &__avatar {
+    grid-area: avatar;
+    // background-color: darkkhaki;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 32px;
+
+    .avatar__image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .avatar__description {
+      // background-color: darkgreen;
+      .avatar__name {
+        color: $main-color;
+        margin-left: 11px;
+        // display: inline;
+      }
+
+      .avatar__responsibility {
+        color: $main-color;
+        margin-left: 11px;
+        // display: inline;
+      }
+    }
+  }
+
+  &__description {
+    grid-area: description;
+    // background-color: crimson;
+  }
+}

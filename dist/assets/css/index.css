@@ -4,10 +4,10 @@
 }
 
 @keyframes animated-menu {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -15,6 +15,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  z-index: 1000;
 }
 .nav #btn-checkbox {
   display: none;
@@ -43,6 +44,7 @@
   background-color: #181719;
   margin-right: 77px;
   transition: all 0.5s ease;
+  z-index: 900;
 }
 .nav__menu .menu__items {
   display: flex;
@@ -77,7 +79,7 @@
     flex-direction: column;
   }
   .nav #btn-checkbox:checked + .nav__menu {
-    animation-duration: 0.2s;
+    animation-duration: 0.5s;
     animation-name: animated-menu;
     display: flex;
     margin: 0;
@@ -86,7 +88,7 @@
     display: inline-block;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 624px) {
   .nav__menu {
     align-items: center;
     display: none;
@@ -136,12 +138,47 @@
   margin-left: 15px;
 }
 
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 189px;
+  width: 410px;
+  background-color: #181719;
+  position: absolute;
+  bottom: -20%;
+  right: 5%;
+  grid-template: "avatar" "description";
+}
+.card__avatar {
+  grid-area: avatar;
+  display: flex;
+  padding-top: 20px;
+  padding-left: 32px;
+}
+.card__avatar .avatar__image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.card__avatar .avatar__description .avatar__name {
+  color: #fff;
+  margin-left: 11px;
+}
+.card__avatar .avatar__description .avatar__responsibility {
+  color: #fff;
+  margin-left: 11px;
+}
+.card__description {
+  grid-area: description;
+}
+
 .image {
   max-height: 100%;
   max-width: 735px;
   width: 60%;
+  position: relative;
 }
-.image img {
+.image__interior {
   height: auto;
   width: 100%;
 }
@@ -164,7 +201,7 @@
   padding: 0 0 60px 0;
 }
 .footer__copyright {
-  color: #fff;
+  color: #a9a9a9a9;
   font-family: "montserrat", sans-serif;
   font-weight: 500;
   font-size: 14px;

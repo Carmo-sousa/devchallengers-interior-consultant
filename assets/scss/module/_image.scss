@@ -1,9 +1,12 @@
+@import "../module/card";
+
 .image {
   max-height: 100%;
   max-width: 735px;
   width: 60%;
+  position: relative;
 
-  img {
+  &__interior {
     height: auto;
     width: 100%;
   }

@@ -2,11 +2,11 @@
 @import "../base/variables";
 
 @keyframes animated-menu {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -15,6 +15,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  z-index: 1000;
   #btn-checkbox {
     display: none;
   }
@@ -45,6 +46,7 @@
     background-color: $background-color;
     margin-right: 77px;
     transition: all 0.5s ease;
+    z-index: 900;
 
     .menu__items {
       display: flex;
@@ -88,7 +90,7 @@
     }
 
     #btn-checkbox:checked + .nav__menu {
-      animation-duration: 0.2s;
+      animation-duration: 0.5s;
       animation-name: animated-menu;
       display: flex;
       margin: 0;
@@ -100,7 +102,7 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 624px) {
   .nav {
     &__menu {
       align-items: center;
