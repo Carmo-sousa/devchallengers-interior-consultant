@@ -1,16 +1,12 @@
 const btnMenuMobile = document.querySelector(".mobile-button-menu");
 const btnMenu = document.querySelector(".button-menu");
 
-btnMenuMobile.addEventListener("click", () => toggleClass());
-btnMenu.addEventListener("click", () => toggleClass());
-
-function toggleClass() {
+btnMenuMobile.addEventListener("click", () => {
     let mobileMenuEl = document.querySelector(".mobile-nav");
-    let open = mobileMenuEl.classList.contains("active") ? true : false;
+    mobileMenuEl.classList.toggle("active");
+});
 
-    if(open) {
-        mobileMenuEl.classList.remove("active");
-    } else {
-        mobileMenuEl.classList.add("active");
-    }
-}
+btnMenu.addEventListener("click", () => {
+    let mobileMenuEl = document.querySelector(".mobile-nav");
+    mobileMenuEl.classList.toggle("active");
+});
