@@ -101,6 +101,19 @@
   font-size: 24px;
 }
 
+.text__read-more {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.text__read-more .fas {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
 .image {
   width: 50%;
 }
